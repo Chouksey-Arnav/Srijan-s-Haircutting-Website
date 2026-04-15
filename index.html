@@ -10,41 +10,44 @@
 </head>
 <body>
 
+    <div class="scroll-progress"></div>
+    <div class="cursor-dot"></div>
+    <div class="grain-overlay"></div>
+
     <nav class="tuff-nav">
         <div class="container nav-wrapper">
             <div class="logo">SY<span>CUTS</span></div>
             <div class="nav-links">
                 <a href="#about">The Athlete</a>
                 <a href="#services">Services</a>
-                <a href="#book" class="btn-cta-small">BOOK THE CHAIR</a>
+                <a href="#book" class="btn-cta-small">BOOK NOW</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-block">
-        <div class="hero-bg-overlay"></div>
+    <header class="hero-block">
         <div class="container hero-flex">
             <div class="hero-content">
                 <div class="badge-row">
-                    <span class="pill-badge">EST. 2026</span>
-                    <span class="pill-badge accent-pill">MILLIMETER PRECISION</span>
+                    <span class="pill-badge accent-pill">EST. 2026</span>
+                    <span class="pill-badge">PRECISION ENGINEERED</span>
                 </div>
-                <h1>ELITE PERFORMANCE. <br><span class="hollow-text">UNMATCHED STYLE.</span></h1>
+                <h1 class="reveal-text">ELITE PERFORMANCE. <br><span class="hollow-text">UNMATCHED STYLE.</span></h1>
                 <p>Welcome to <strong>SYCUTS</strong>. Srijan Yerkola applies the technical discipline of a professional cricketer to the art of the fade. We don't just cut hair; we engineer your image.</p>
                 <div class="hero-btns">
                     <a href="#book" class="btn-solid">RESERVE SESSION</a>
-                    <a href="#services" class="btn-outline">VIEW MENU</a>
+                    <a href="#services" class="btn-outline">THE MENU</a>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <section id="about" class="athlete-section">
         <div class="container grid-two">
             <div class="athlete-info">
                 <h2 class="label">THE PHILOSOPHY</h2>
                 <h3>FROM THE PITCH <br>TO THE STUDIO.</h3>
-                <p>In cricket, focus is the only thing standing between a win and a loss. Srijan brings that same high-stakes hand-eye coordination to every stroke of the shears. At SYCUTS, "good enough" doesn't exist. Only perfection.</p>
+                <p>In cricket, focus is the only thing standing between a victory and a loss. Srijan brings that same high-stakes coordination to every stroke of the shears.</p>
                 <ul class="tuff-list">
                     <li><i data-lucide="target"></i> Surgical Skin Fades</li>
                     <li><i data-lucide="zap"></i> Advanced Blowout Tapers</li>
@@ -53,11 +56,18 @@
             </div>
             <div class="athlete-visual">
                 <div class="visual-card">
+                    <div class="crosshair-icon">+</div>
                     <span class="card-quote">"Focus is everything."</span>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="tuff-marquee">
+        <div class="marquee-content">
+            SYCUTS • NO BOUNDARIES • SYCUTS • NO BOUNDARIES • SYCUTS • NO BOUNDARIES • SYCUTS • NO BOUNDARIES •
+        </div>
+    </div>
 
     <section id="services" class="service-bento">
         <div class="container">
@@ -85,20 +95,10 @@
         </div>
     </section>
 
-    <section id="book" class="cta-block">
-        <div class="container cta-inner">
-            <div class="cta-text">
-                <h2>READY TO <br>UPGRADE?</h2>
-                <p>Availability is strictly limited. SYCUTS is a premium experience—secure your spot before the week is booked out.</p>
-            </div>
-            <a href="#" class="btn-giant">BOOK THE CHAIR</a>
-        </div>
-    </section>
-
     <footer class="tuff-footer">
         <div class="container footer-flex">
             <div class="logo">SY<span>CUTS</span></div>
-            <div class="footer-copy">&copy; 2026 Srijan Yerkola. All Rights Reserved.</div>
+            <div class="footer-copy">&copy; 2026 Srijan Yerkola.</div>
             <div class="social-links">
                 <a href="#"><i data-lucide="instagram"></i></a>
                 <a href="#"><i data-lucide="tiktok"></i></a>
@@ -106,6 +106,30 @@
         </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+
+        // SCROLL PROGRESS SCRIPT
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.querySelector(".scroll-progress").style.width = scrolled + "%";
+        };
+
+        // PRECISION CURSOR SCRIPT
+        const cursor = document.querySelector('.cursor-dot');
+        document.addEventListener('mousemove', e => {
+            cursor.style.top = e.clientY + 'px';
+            cursor.style.left = e.clientX + 'px';
+        });
+
+        // CURSOR REACTION
+        const activeItems = document.querySelectorAll('a, .bento-item, .btn-solid');
+        activeItems.forEach(item => {
+            item.addEventListener('mouseenter', () => cursor.classList.add('cursor-grow'));
+            item.addEventListener('mouseleave', () => cursor.classList.remove('cursor-grow'));
+        });
+    </script>
 </body>
 </html>
