@@ -1,179 +1,137 @@
-/* --- VARIABLES --- */
-:root {
-    --bg-dark: #0a0a0a;
-    --card-bg: #161616;
-    --accent: #00d4ff; /* Electric Blue */
-    --text-main: #ffffff;
-    --text-dim: #a0a0a0;
-    --white: #ffffff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srijan Yerkola | The Elite Edge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
 
-/* --- RESET & BASE --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <nav class="glass-nav">
+        <div class="container nav-content">
+            <div class="logo">SRIJY<span>.</span></div>
+            <div class="nav-links">
+                <a href="#work">Portfolio</a>
+                <a href="#services">The Menu</a>
+                <a href="#about">The Athlete</a>
+            </div>
+            <a href="#" class="btn-glow">BOOK THE CHAIR</a>
+        </div>
+    </nav>
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-badge">PERFECTION UNDER PRESSURE</div>
+            <h1>PRECISION <br><span class="outline">MEETS</span> STYLE.</h1>
+            <p>From the cricket pitch to the barber chair. Srijan Yerkola delivers high-performance fades, tapers, and textured fringes for the next generation.</p>
+            <div class="hero-footer">
+                <div class="stat-box">
+                    <strong>500+</strong>
+                    <span>Cuts Delivered</span>
+                </div>
+                <div class="stat-box">
+                    <strong>100%</strong>
+                    <span>Focus</span>
+                </div>
+                <div class="cta-group">
+                    <a href="#services" class="btn-main">VIEW MENU</a>
+                    <a href="#work" class="btn-ghost">SEE RECENT WORK</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+    <section id="work" class="lookbook">
+        <div class="container">
+            <h2 class="section-title">RECENT DROPS</h2>
+            <div class="masonry-grid">
+                <div class="work-item tall">
+                    <img src="https://images.unsplash.com/photo-1621605815841-aa88c8210095?auto=format&fit=crop&q=80" alt="Fade">
+                    <div class="work-overlay"><span>Skin Fade</span></div>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80" alt="Blowout">
+                    <div class="work-overlay"><span>Blowout Taper</span></div>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80" alt="Textured">
+                    <div class="work-overlay"><span>Textured Fringe</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-h1, h2, .logo {
-    font-family: 'Archivo Black', sans-serif;
-    text-transform: uppercase;
-}
+    <section id="services" class="services">
+        <div class="container">
+            <div class="grid-2">
+                <div class="service-intro">
+                    <h2 class="section-title">THE MENU</h2>
+                    <p>Modern cuts designed for athletes and trendsetters. Every service includes a precision lineup and professional styling.</p>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="s-info">
+                            <h3>Signature Mid/Low Fade</h3>
+                            <p>Smooth transitions, razor sharp lineup.</p>
+                        </div>
+                        <div class="s-price">$35</div>
+                    </div>
+                    <div class="service-item featured-item">
+                        <div class="s-info">
+                            <h3>The "Modern Teen" Blowout</h3>
+                            <p>Tapered sides, maximum volume, textured top.</p>
+                        </div>
+                        <div class="s-price">$40</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="s-info">
+                            <h3>Texture & Fringe</h3>
+                            <p>Scissor-only weight removal and styling.</p>
+                        </div>
+                        <div class="s-price">$30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-a { text-decoration: none; color: inherit; transition: 0.3s; }
+    <section id="about" class="athlete-section">
+        <div class="container athlete-flex">
+            <div class="athlete-image">
+                <div class="img-frame"></div>
+            </div>
+            <div class="athlete-text">
+                <h2 class="section-title">THE ATHLETE'S DISCIPLINE</h2>
+                <p>On the cricket pitch, there is no room for error. Srijan Yerkola brings that same competitive drive and hand-eye coordination to his barbering craft.</p>
+                <ul class="benefit-list">
+                    <li><i data-lucide="target"></i> Millimeter Precision</li>
+                    <li><i data-lucide="zap"></i> Fast-Paced Excellence</li>
+                    <li><i data-lucide="trending-up"></i> Always Improving</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-/* --- NAVIGATION --- */
-nav {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #222;
-    position: sticky;
-    top: 0;
-    background: rgba(10, 10, 10, 0.9);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-}
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">SRIJY<span>.</span></div>
+                <p>Official Barber of the Playmakers.</p>
+            </div>
+            <div class="footer-cta">
+                <h3>Ready to Level Up?</h3>
+                <a href="#" class="btn-main">BOOK THE CHAIR</a>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            &copy; 2026 Srijan Yerkola. Crafted for Greatness.
+        </div>
+    </footer>
 
-.nav-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo { font-size: 1.5rem; letter-spacing: -1px; }
-.logo span { color: var(--accent); }
-
-.nav-links { display: flex; list-style: none; gap: 2rem; }
-.nav-links a:hover { color: var(--accent); }
-
-.btn-nav {
-    background: var(--accent);
-    color: #000;
-    padding: 0.6rem 1.2rem;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-/* --- HERO --- */
-.hero { padding: 100px 0; }
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.badge {
-    color: var(--accent);
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-h1 { font-size: 4.5rem; line-height: 0.9; margin: 1rem 0; }
-.text-gradient {
-    background: linear-gradient(to right, var(--accent), #fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-text p { color: var(--text-dim); font-size: 1.2rem; margin-bottom: 2rem; }
-
-.hero-actions { display: flex; gap: 1rem; }
-
-.btn-primary {
-    background: var(--white);
-    color: #000;
-    padding: 1rem 2rem;
-    font-weight: bold;
-}
-
-.btn-secondary {
-    border: 1px solid #444;
-    padding: 1rem 2rem;
-}
-
-.image-placeholder {
-    width: 100%;
-    height: 500px;
-    background: #222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    color: #444;
-}
-
-/* --- SERVICES --- */
-.services { padding: 100px 0; background: #0f0f0f; }
-.section-header { text-align: center; margin-bottom: 4rem; }
-.section-header h2 { font-size: 3rem; }
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background: var(--card-bg);
-    padding: 3rem 2rem;
-    border-radius: 12px;
-    border: 1px solid #222;
-    transition: 0.3s;
-}
-
-.service-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-
-.featured { border: 2px solid var(--accent); position: relative; }
-.best-seller {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--accent);
-    color: #000;
-    font-size: 0.7rem;
-    font-weight: bold;
-    padding: 2px 10px;
-}
-
-.price { margin-top: 1.5rem; font-weight: bold; color: var(--accent); font-size: 1.2rem; }
-
-/* --- FOOTER --- */
-footer { padding: 80px 0 20px; border-top: 1px solid #222; }
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 4rem;
-    margin-bottom: 40px;
-}
-
-.footer-links h4 { margin-bottom: 1.5rem; color: var(--accent); }
-.footer-links a, .footer-links p { display: block; color: var(--text-dim); margin-bottom: 0.5rem; }
-
-.copyright { text-align: center; font-size: 0.8rem; color: #444; border-top: 1px solid #222; padding-top: 20px; }
-
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .hero-actions { justify-content: center; }
-    .nav-links { display: none; }
-}
+    <script>lucide.createIcons();</script>
+</body>
+</html>
